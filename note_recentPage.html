@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>笔记展示页</title>
+    <link rel="stylesheet" type="text/css" href="css/responsive.tabs.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
+    <style type="text/css">
+        /*tab切换样式*/
+        ul{list-style:none; }
+        .demo { width:1000px; margin:20px auto 50px; }
+        .tab-content { background-color:#f7f7f7; padding:10px; }
+        @media only screen and ( max-width:1000px ){
+            /*body { margin:5px 20px;}*/
+            .demo { width:100%; }
+            .tab_search{margin-right: 0px; margin-top: 5px;}
+        }
+
+
+
+        /*导航样式*/
+        .carousel-inner img{
+               margin: 0px auto;
+           }
+
+        @media screen and  (min-width: 480px){
+            #box{
+                position: relative;
+                height: 50px;
+            }
+
+
+
+            #container{
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                z-index: 1;
+            }
+            .my-nav-list{
+                width: 80px;
+                height: 50px;
+                float: right;
+                background-color: white;
+            }
+        }
+        @media screen and (max-width: 480px){
+            #box{
+                position: relative;
+            }
+            #container{
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                border: solid 1px grey;
+                border-radius: 5px;
+                z-index: 1;
+            }
+            .my-nav-list{
+                width: 25%;
+                height: 55px;
+                float: left;
+                text-align: center;
+                background-color: white;
+            }
+        }
+
+        /*搜索框样式*/
+
+        .searchinput{
+            border-right-width: 0px;
+            /*padding-left: 3px;*/
+            width: 400px;
+            height: 30px;
+            font-family: arial;
+            float: left;
+            border-top-width: 0px;
+            border-bottom-width: 0px;
+            color: #636365;
+            /*margin-left: 3px;*/
+            font-size: 12pt;
+            vertical-align: middle;
+            border-left-width: 0px;
+            /*margin-right: 3px;*/
+        }
+        @media screen and (max-width: 480px){
+            .searchinput{width: 300px;}
+        }
+        .tab_search{
+            border-bottom: #cccccc 1px solid;
+            border-left: #cccccc 1px solid;
+            height: 25px;
+            border-top: #cccccc 1px solid;
+            border-right: #cccccc 1px solid;
+        }
+        .searchaction{
+            width: 21px;
+            float: left;
+            height: 17px;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/responsive.tabs.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        //tab切换js
+        $(document).ready(function(){
+
+            $('.tabs').respTabs();
+
+        });
+
+        //导航js
+        function movepic(img_name,img_src) {
+            document[img_name].src=img_src;
+        }
+
+    </script>
+</head>
+
+<body>
+
+<!--导航html-->
+<div id="box">
+    <img src="image/logo.jpg"style="width:70px;height: 70px;margin-top: 5px">
+    <div id="container">
+        <div class="my-nav-list"><a href="" onmouseover="movepic('button','image/windsound2.png')" onmouseout="movepic('button','image/windsound1.png')"><img name="button" src="image/windsound1.png" alt="windsound"></a></div>
+        <div class="my-nav-list"><a href="" ><img name="button2" src="image/note2.png" alt="note"></a></div>
+        <div class="my-nav-list"><a href="" onmouseover="movepic('button3','image/notepic2.png')" onmouseout="movepic('button3','image/notepic1.png')"><img name="button3" src="image/notepic1.png" alt="notepic"></a></div>
+        <div class="my-nav-list"><a href="" onmouseover="movepic('button4','image/personal2.png')" onmouseout="movepic('button4','image/personal1.png')"><img name="button4" src="image/personal1.png" alt="personal"></a></div>
+    </div>
+</div>
+
+<!--搜索框html-->
+    <table border="0" align="center" class="tab_search">
+        <tr>
+            <td><input type="text" class="searchinput"></td>
+            <td><input type="image" class="searchaction" src = "image/magglass.gif"></td>
+        </tr>
+    </table>
+
+<!--tab切换html-->
+<div class="demo">
+
+    <div class="tabs">
+        <ul class="tabs-list">
+            <li class="active"><a href="javascript:;">推荐</a></li>
+            <li><a href="javascript:;">最新</a></li>
+        </ul>
+        <div class="tabs-container">
+            <div class="tab-content" style="display:block;">
+                <ol>
+                <li>响应式Web设计(Responsive Web design)的理念是：集中创建页面的图片排版大小，可以智能地根据用户行为以及使用的设备环境（系统平台、屏幕尺寸、屏幕定向等）进行相对应的布局。</li>
+                <li>如今客户不仅仅使用iPhone和笔记本，而且使用iMac的27英寸显示器，10英寸的Kindle和很多平板设备。这些设备可能会使用不同的浏览器，并且每种表格因素和浏览器的组合都可能导致不同的页面渲染。并且这些行为可能在每个版本上都不太一样。</li>
+                </ol>
+            </div>
+            <div class="tab-content">
+                <ol>
+                <li>响应式Web设计(Responsive Web design)的理念是：页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行相应的响应和调整。具体的实践方式由多方面组成，包括弹性网格和布局、图片、CSS media query的使用等。</li>
+                <li>响应式网页设计就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
