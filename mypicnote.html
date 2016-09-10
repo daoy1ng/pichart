@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        #header .logo a h1{
+            display:inline;
+            float: left;
+        }
+        .search form{
+            float: right;
+            position: relative;
+            /*margin-left: 70%;*/
+            width: 30%;
+            margin: 20px 20px 20px 20px;
+            display:inline;
+            border:2px solid #333333;
+            padding: 0.5em 0;
+            background: #ffffff;
+        }
+        #header .search input[type="text"]{
+            width: 80%;
+            display:inline-block;
+            padding: 0em 0.6em;
+            font-size: 1em;
+            outline: none;
+            border: none;
+            color: #333333;
+        }
+        #header .search input[type="submit"]{
+            background:url('images/search-icon.png') no-repeat 0px 0px;
+            border: none;
+            height: 26px;
+            width: 26px;
+            display: inline-block;
+            position: absolute;
+            outline: none;
+            cursor: pointer;
+            top: 6px;
+            right: 2px;
+        }
+        .welcome {
+            padding:5em 0em;
+        }
+        .wel-top h3 {
+            font-size: 2.2em;
+            color:#A0431B;
+            text-align: center;
+            font-family: 'Kreon', serif;
+        }
+        .wel-top {
+            margin-bottom:1em;
+        }
+        .wel-img {
+            float: left;
+            width: 50%;
+            border-radius: 15px;
+            border: 5px solid #fba919;
+        }
+        .wel-img:hover{
+            border: 5px solid #A0431B;
+            transition: 0.5s all;
+            -webkit-transition: 0.5s all;
+            -moz-transition: 0.5s all;
+            -o-transition: 0.5s all;
+        }
+        .wel-img img{
+            border-radius: 10px;
+        }
+        .wel-text {
+            float: right;
+            width: 50%;
+            margin-top:2em;
+            text-align: center;
+        }
+        .wel-block {
+            margin-top: 4em;
+        }
+        .wel-text h4 {
+            font-size: 1.3em;
+            color:#000000;
+            margin-bottom: 0.25em;
+            font-family: 'Kreon', serif;
+        }
+        .wel-text p {
+            font-size: 0.95em;
+            color:#767676;
+            width: 87%;
+            margin: 0 auto;
+            line-height: 1.7em;
+        }
+        @media(max-width: 320px){
+            .welcome {
+                padding: 2em 0em;
+            }
+            .wel-top h3 {
+                font-size: 1.2em;
+            }
+            .wel-block {
+                margin-top: 1.5em;
+            }
+            .wel-img {
+                width: 100%;
+                float: none;
+            }
+            .wel-text {
+                width: 100%;
+                margin-top: 1em;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<div id="header">
+    <div class="logo">
+        <a href="#"><h1>我的图谱</h1></a>
+    </div>
+    <div class="search">
+        <form>
+            <input type="text" value="Search">
+            <input type="submit" value="">
+        </form>
+    </div>
+</div>
+<div style="clear:both"></div>
+  <div class="navbar navbar-default" id="a_Button">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div id="myCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Javascript图谱</a></li>
+            <li><a href="#">Nodejs图谱</a></li>
+            <li><a href="#">CSS图谱</a></li>
+        </ul>
+    </div>
+  </div>
+<div class="welcome">
+    <div class="container">
+        <div class="wel-main">
+            <div class="wel-top">
+                <h3>我的图谱</h3>
+            </div>
+            <div class="wel-bottom">
+                <div class="col-md-6 wel-left">
+                    <div class="wel-block">
+                        <div class="wel-img">
+                            <img src="images/1.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="wel-text">
+                            <h4>图谱1</h4>
+                            <p>此处应有介绍</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="wel-block">
+                        <div class="wel-img">
+                            <img src="images/2.png" alt="" class="img-responsive">
+                        </div>
+                        <div class="wel-text">
+                            <h4>图谱2</h4>
+                            <p>此处应该也有介绍</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-6 wel-right">
+                    <div class="wel-block">
+                        <div class="wel-img">
+                            <img src="images/3.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="wel-text">
+                            <h4>图谱3</h4>
+                            <p>此处可能也需要介绍</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="wel-block">
+                        <div class="wel-img">
+                            <img src="images/4.jpg" alt="" class="img-responsive">
+                        </div>
+                        <div class="wel-text">
+                            <h4>图谱4</h4>
+                            <p>此处还是加点介绍吧</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
