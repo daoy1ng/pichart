@@ -1,170 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>笔记展示页</title>
-    <link rel="stylesheet" type="text/css" href="css/responsive.tabs.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
-    <style type="text/css">
-        /*tab切换样式*/
-        ul{list-style:none; }
-        .demo { width:1000px; margin:20px auto 50px; }
-        .tab-content { background-color:#f7f7f7; padding:10px; }
-        @media only screen and ( max-width:1000px ){
-            /*body { margin:5px 20px;}*/
-            .demo { width:100%; }
-            .tab_search{margin-right: 0px; margin-top: 5px;}
-        }
+    <link rel="stylesheet"type="text/css"  href="css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="css/note_showPage.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.js"></script>
 
-
-
-        /*导航样式*/
-        .carousel-inner img{
-               margin: 0px auto;
-           }
-
-        @media screen and  (min-width: 480px){
-            #box{
-                position: relative;
-                height: 50px;
-            }
-
-
-
-            #container{
-                position: fixed;
-                top: 0px;
-                width: 100%;
-                z-index: 1;
-            }
-            .my-nav-list{
-                width: 80px;
-                height: 50px;
-                float: right;
-                background-color: white;
-            }
-        }
-        @media screen and (max-width: 480px){
-            #box{
-                position: relative;
-            }
-            #container{
-                position: fixed;
-                bottom: 0px;
-                width: 100%;
-                border: solid 1px grey;
-                border-radius: 5px;
-                z-index: 1;
-            }
-            .my-nav-list{
-                width: 25%;
-                height: 55px;
-                float: left;
-                text-align: center;
-                background-color: white;
-            }
-        }
-
-        /*搜索框样式*/
-
-        .searchinput{
-            border-right-width: 0px;
-            /*padding-left: 3px;*/
-            width: 400px;
-            height: 30px;
-            font-family: arial;
-            float: left;
-            border-top-width: 0px;
-            border-bottom-width: 0px;
-            color: #636365;
-            /*margin-left: 3px;*/
-            font-size: 12pt;
-            vertical-align: middle;
-            border-left-width: 0px;
-            /*margin-right: 3px;*/
-        }
-        @media screen and (max-width: 480px){
-            .searchinput{width: 300px;}
-        }
-        .tab_search{
-            border-bottom: #cccccc 1px solid;
-            border-left: #cccccc 1px solid;
-            height: 25px;
-            margin:0px auto;
-            border-top: #cccccc 1px solid;
-            border-right: #cccccc 1px solid;
-        }
-        .searchaction{
-            width: 21px;
-            float: left;
-            height: 17px;
-        }
-
-    </style>
-    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/responsive.tabs.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        //tab切换js
-        $(document).ready(function(){
-
-            $('.tabs').respTabs();
-
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
         });
 
-        //导航js
-        function movepic(img_name,img_src) {
-            document[img_name].src=img_src;
-        }
-
     </script>
-</head>
-
+        </head>
 <body>
+<div class="note_show1">
+     <label>笔记展示</label>
+    <div  id="carousel-example-generic" class="carousel slide" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/pic1.png" alt="...">
 
-<!--导航html-->
-<div id="box">
-    <div id="container">
-        <div class="my-nav-list"><a href="index.html" onmouseover="movepic('button','images/windsound.png')" onmouseout="movepic('button','images/windsound1.png')"><img name="button" src="images/windsound1.png" alt="windsound"></a></div>
-        <div class="my-nav-list"><a href="#" ><img name="button2" src="images/note.png" alt="note"></a></div>
-        <div class="my-nav-list"><a href="notepic.html" onmouseover="movepic('button3','images/notepic.png')" onmouseout="movepic('button3','images/notepic1.png')"><img name="button3" src="images/notepic1.png" alt="notepic"></a></div>
-        <div class="my-nav-list"><a href="" onmouseover="movepic('button4','images/personal.png')" onmouseout="movepic('button4','images/personal1.png')"><img name="button4" src="images/personal1.png" alt="personal"></a></div>
-    </div>
-</div>
-
-<!--搜索框html-->
-    <table border="0"  class="tab_search">
-        <tr>
-            <td><input type="text" class="searchinput"></td>
-            <td><input type="image" class="searchaction" src = "images/magglass.gif"></td>
-        </tr>
-    </table>
-
-<!--tab切换html-->
-<div class="demo">
-
-    <div class="tabs">
-        <ul class="tabs-list">
-            <li class="active"><a href="javascript:;">推荐</a></li>
-            <li><a href="javascript:;">最新</a></li>
-        </ul>
-        <div class="tabs-container">
-            <div class="tab-content" style="display:block;">
-                <ol>
-                <li>响应式Web设计(Responsive Web design)的理念是：集中创建页面的图片排版大小，可以智能地根据用户行为以及使用的设备环境（系统平台、屏幕尺寸、屏幕定向等）进行相对应的布局。</li>
-                <li>如今客户不仅仅使用iPhone和笔记本，而且使用iMac的27英寸显示器，10英寸的Kindle和很多平板设备。这些设备可能会使用不同的浏览器，并且每种表格因素和浏览器的组合都可能导致不同的页面渲染。并且这些行为可能在每个版本上都不太一样。</li>
-                </ol>
             </div>
-            <div class="tab-content">
-                <ol>
-                <li>响应式Web设计(Responsive Web design)的理念是：页面的设计与开发应当根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)进行相应的响应和调整。具体的实践方式由多方面组成，包括弹性网格和布局、图片、CSS media query的使用等。</li>
-                <li>响应式网页设计就是一个网站能够兼容多个终端——而不是为每个终端做一个特定的版本。</li>
-                </ol>
+            <div class="item">
+                <img src="images/pic2.png" alt="...">
+
+            </div>
+            <div class="item">
+                <img src="images/pic1.png" alt="...">
             </div>
         </div>
+
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
     </div>
+
+
 </div>
+<div class="note_show2">
+    <input type="text" class="searchinput" value="请输入想搜索的内容"><img src="images/magglass.gif">
+</div>
+<div class="note_show3">
+    <ul class="nav nav-pills" role="tablist">
+        <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+        <li role="presentation"><a href="#">Profile<span class="badge">1</span></a></li>
+        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+    </ul>
+</div>
+<div class="note_show4">
+    <button type="button" class="btn btn-default navbar-btn">创建我的笔记</button>
+</div>
+
+<div>
+    <table class="note_show5 table table-striped table-hover ">
+        <tr>
+            <td><img src="images/top1.jpg"></td>
+            <td><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non</p></td>
+        </tr>
+        <tr>
+            <td><img src="images/top2.jpg"></td>
+            <td><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non</p></td>
+        </tr>
+        <tr>
+            <td><img src="images/top3.jpg"></td>
+            <td><p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non</p></td>
+        </tr>
+    </table>
+</div>
+
+
 
 </body>
 </html>
