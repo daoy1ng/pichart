@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>图谱</title>
+    <style>
+        @media screen and  (min-width: 480px){
+            #box{
+                position: relative;
+            }
+            #container{
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                z-index: 1;
+            }
+            .my-nav-list{
+                width: 80px;
+                height: 50px;
+                float: right;
+                background-color: rgb(0,0,0);
+            }
+            #bootstrap-bigimage{
+                width: 100%;
+                height: 650px;
+                background-image: url("images/bigback.jpg");
+                background-size: cover;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            #bootstrap-bigimage h1{
+                position: absolute;
+                right: 20%;
+                top: 20%;
+                color: white;
+            }
+        }
+        @media screen and (max-width: 768px){
+            #box{
+                position: relative;
+            }
+            #container{
+                position: fixed;
+                bottom: 0px;
+                width: 100%;
+                border: solid 1px grey;
+                border-radius: 5px;
+                z-index: 1;
+            }
+            .my-nav-list{
+                width: 25%;
+                height: 55px;
+                float: left;
+                text-align: center;
+                background-color: white;
+            }
+            #bootstrap-bigimage{
+                width: 100%;
+                height:230px;
+                background-image: url("images/bigback.jpg");
+                background-size: cover;
+                position: relative;
+                margin-bottom: 20px;
+            }
+            #bootstrap-bigimage h1{
+                position: absolute;
+                right: 25%;
+                top: 20%;
+                color: white;
+            }
+            #mobile-img{
+                height: 100px;
+            }
+        }
+    </style>
+    <script>
+        function movepic(img_name,img_src) {
+            document[img_name].src=img_src;
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="container">
+        <div class="my-nav-list"><a href="" onmouseover="movepic('button','images/windsound.png')" onmouseout="movepic('button','images/windsound1.png')"><img name="button" src="images/windsound1.png" alt="windsound"></a></div>
+        <div class="my-nav-list"><a href="note_recentPage.html" onmouseover="movepic('button2','images/note.png')" onmouseout="movepic('button2','images/note1.png')"><img name="button2" src="images/note1.png" alt="note"></a></div>
+        <div class="my-nav-list"><a href=""><img name="button3" src="images/notepic.png" alt="notepic"></a></div>
+        <div class="my-nav-list"><a href="" onmouseover="movepic('button4','images/personal.png')" onmouseout="movepic('button4','images/personal1.png')"><img name="button4" src="images/personal1.png" alt="personal"></a></div>
+    </div>
+</div>
+<div id="bootstrap-container">
+    <div id="bootstrap-bigimage">
+        <h1>谈校风声</h1>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <ul class="media-list">
+            <li class="media">
+                <a class="media-left" href="#">
+                    <img src="images/pic07.jpg" alt="..." id="mobile-img">
+                </a>
+            </li>
+        </ul>
+        <p>
+            一起来讨论前端技术吧！一起来谈笑风生
+        </p>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-12">
+    <div>最新</div>
+    <ul class="media-list">
+        <li class="media">
+            <a class="media-left" href="#">
+                <img src="images/pic04.jpg" alt="...">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">拍一夏</h4>
+                你想做网红吗？
+            </div>
+        </li>
+        <li class="media">
+            <a class="media-left" href="#">
+                <img src="images/pic05.jpg" alt="...">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">前端俱乐部</h4>
+                一起来讨论前端技术吧！
+            </div>
+        </li>
+        <li class="media">
+            <a class="media-left" href="#">
+                <img src="images/pic06.jpg" alt="...">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading">创客酷跑</h4>
+                酷跑中的黑曼巴
+            </div>
+        </li>
+    </ul>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-12">
+        <div>&nbsp;</div>
+        <ul class="media-list">
+            <li class="media">
+                <a class="media-left" href="#">
+                    <img src="images/pic05.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">拍一夏</h4>
+                    你想做网红吗？
+                </div>
+            </li>
+            <li class="media">
+                <a class="media-left" href="#">
+                    <img src="images/pic06.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">前端俱乐部</h4>
+                    一起来讨论前端技术吧！
+                </div>
+            </li>
+            <li class="media">
+                <a class="media-left" href="#">
+                    <img src="images/pic04.jpg" alt="...">
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">创客酷跑</h4>
+                    酷跑中的黑曼巴
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
