@@ -24,50 +24,53 @@
 
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="home">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading1">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse"  href="#collapse1" aria-expanded="false" aria-controls="collapseOne">
-                            <div> Notejs图谱</div>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <img src="images/pic.jpg" class="img-responsive" alt="Responsive image">
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading2">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapseOne">
-                            <div>HTML5图谱</div>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <img src="images/pic1.jpg" class="img-responsive" alt="Responsive image">
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading" role="tab" id="heading3">
-                    <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse"  href="#collapse3" aria-expanded="false" aria-controls="collapseOne" >
-                            <div>CSS3图谱</div>
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <img src="images/pic2.jpg" class="img-responsive" alt="Responsive image">
-                    </div>
-                </div>
+        <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#collapseOne">
+                    nodejs图谱
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+                <img src="images/pic.jpg" class="img-responsive" alt="Responsive image">
             </div>
         </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#collapseTwo">
+                    html图谱
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <img src="images/pic1.jpg" class="img-responsive" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"
+                   href="#collapseThree">
+                    css图谱
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+                <img src="images/pic2.jpg" class="img-responsive" alt="Responsive image">
+            </div>
+        </div>
+    </div>
+</div>
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">
         还没有构建自己的图谱:-O
