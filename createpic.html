@@ -1,58 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>拖拽笔记标签</title>
-    <meta charset="utf-8"><meta>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="all" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/XQ_drag.js"></script>
-    <style type="text/css">
-        *{
-            margin: 0px;
-            padding: 0px;
+    <meta charset="UTF-8">
+    <title>图谱DOM操作</title>
+    <style>
+        #background{
+            width: 300px;
+            height: 600px;
+            background-image: url("images/atlas_1.jpg");
+            background-repeat: no-repeat;
+            background-position: 40px; ;
+            margin: 0px auto;
+            border: solid 1px;
+            position: relative;
         }
-        body{
-            background-color:#E9E9E9
+        .text{
+            text-align: center;
+            width: 80px;
+            height: 30px;
         }
-        .drop{
-            width: 320px;
-            min-height: 200px;
-            display: block;
-            border: 1px solid #036BB5;
-            padding: 10px;
+        .button{
+            text-align: center;
+            width: 40px;
+            height: 30px;
         }
-        .drag{
-            width: 100px;
-            height: 100px;
-            overflow: hidden;
-            display: inline-block;
-            margin-right: 10px;
+        .button2{
+            text-align: center;
+            width: 40px;
+            height: 30px;
+            float: right;
         }
-        .drag img{
-            width: 100%;
-            height: 100%;
+        #object1{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 100px;
+            top: 20px;
+        }
+        #object2{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 20px;
+            top: 220px;
+        }
+        #object3{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 180px;
+            top: 220px;
+        }
+        #object4{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 30px;
+            top: 370px;
+        }
+        #object5{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 180px;
+            top: 420px;
+        }
+        #object6{
+            width: 82px;
+            height: 65px;
+            position: absolute;
+            left: 100px;
+            top: 520px;
+        }
+        p{
+            text-align: center;
+            border: solid 1px;
         }
     </style>
 </head>
 <body>
-<div class="col-xs-12 col-sm-4">
-<div class="drop" xq_drop="true" style="background:#2AC0FF">
-    <div class="drag" xq_drag="true" id="1">
-        <img  src="images/a1.png" ondragstart="return false"/>
+    <div id="background">
+        <div id="object1">
+            <input type="text" class="text" id="note-input1" value="笔记1" >
+            <input type="button" class="button" value="命名" onclick="change1()">
+            <input type="button" class="button2" value="编辑" onclick="jumpage()">
+        </div>
+       <div id="object2">
+               <input type="text" class="text" id="note-input2" value="资料1" >
+               <input type="button" class="button" value="命名" onclick="change2()">
+               <input type="button" class="button2" value="编辑" onclick="jumpage()">
+       </div>
+        <div id="object3">
+            <input type="text" class="text" id="note-input3" value="佐证" >
+            <input type="button" class="button" value="命名" onclick="change3()">
+            <input type="button" class="button2" value="编辑" onclick="jumpage()">
+        </div>
+        <div id="object4">
+            <input type="text" class="text" id="note-input4" value="资料2" >
+            <input type="button" class="button" value="命名" onclick="change4()">
+            <input type="button" class="button2" value="编辑" onclick="jumpage()">
+        </div>
+        <div id="object5">
+            <input type="text" class="text" id="note-input5" value="参考" >
+            <input type="button" class="button" value="命名" onclick="change5()">
+            <input type="button" class="button2" value="编辑" onclick="jumpage()">
+        </div>
+        <div id="object6">
+            <p>著作</p>
+        </div>
     </div>
-    <div class="drag" xq_drag="true" id="2">
-        <img  src="images/a2.png" ondragstart="return false"/>
-    </div>
-    <div class="drag" xq_drag="true" id="3">
-        <img  src="images/a3.png" ondragstart="return false"/>
-    </div>
-    <div class="drag" xq_drag="true" id="4">
-        <img  src="images/a4.png" ondragstart="return false"/>
-    </div>
-</div>
-<div class="drop" xq_drop="true" style="background:#2490E9">
-</div>
-</div>
+    <script>
+        function change1(){
+            var noteinput=document.getElementById("note-input1");
+            noteinput.value="";
+        }
+        function change2(){
+            var noteinput=document.getElementById("note-input2");
+            noteinput.value="";
+        }
+        function change3(){
+            var noteinput=document.getElementById("note-input3");
+            noteinput.value="";
+        }
+        function change4(){
+            var noteinput=document.getElementById("note-input4");
+            noteinput.value="";
+        }
+        function change5(){
+            var noteinput=document.getElementById("note-input5");
+            noteinput.value="";
+        }
+        function  jumpage(){
+            location.href="jsDemo1.html"
+        }
+    </script>
 </body>
 </html>
